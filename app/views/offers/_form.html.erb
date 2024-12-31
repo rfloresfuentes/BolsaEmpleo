@@ -1,0 +1,28 @@
+<%= form_with(model: @offer) do |form| %>
+  <% if @offer.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@offer.errors.count, "error") %> prohibido guardar esta oferta:</h2>
+
+      <ul>
+        <% @offer.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :Vacante, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+  <br>
+  <div>
+    <%= form.label :descripción_de_la_Oferta, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+  <br>
+  <div>
+    <%= form.submit %>
+  </div>
+  <br>
+<% end %>

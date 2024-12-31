@@ -1,0 +1,19 @@
+<div class="text-center">
+  
+  <% content_for :title, "Ofertas de Empleo" %>
+<hr>
+  <h1>Ofertas de Empleo Disponiles</h1>
+<hr>
+  <div id="offers">
+    <% @offers.each do |offer| %>
+      <p>
+        <%= link_to offer.title, offer, class:'btn btn-outline-secondary' %>
+      </p>
+    <% end %>
+  </div>
+  <hr>
+  <% if user_signed_in? && current_user.isadmin %>
+    <%= link_to "Agregrar Oferta", new_offer_path, class: 'btn btn-secondary btn-sm' %>
+  <% end%>
+</div>
+ 

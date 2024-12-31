@@ -1,0 +1,11 @@
+<% content_for :title, "Nueva Oferta" %>
+<div class="row text-center">
+  <h1>Agregar Oferta de Empleo</h1>
+  <%= render "form", offer: @offer %>
+  <hr>
+</div>
+<div class="text-center">
+  <%= link_to "Volver", offers_path, class:'btn btn-secondary btn-sm' %>
+  <hr>
+</div>
+

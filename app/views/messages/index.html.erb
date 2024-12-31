@@ -1,0 +1,8 @@
+<h1>Messages</h1>
+
+<ul >
+    <%@postulations.each do |p|%>
+    <li><%= p.user.name%> has applied to <b><%=p.offer.title%></b> <a class: "no-underline" href="/postulation/check/<%=p.id%>">✔</a></li>
+    <% end %>
+</ul>
+
